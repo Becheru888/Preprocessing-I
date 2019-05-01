@@ -152,6 +152,21 @@ body {
 	margin   : 0 auto;
 }
 
+
+// ----- Palet of coulors ----//
+
+@primaryColor : #0031a4;
+@fontColor    : rgb(231, 91, 224);
+
+
+//---- Media queries set mobile ----//
+
+
+@mobileBreakpoint: 500px;
+
+
+
+
 /*-------- Font style -------*/
 
 table {
@@ -161,29 +176,34 @@ table {
 p {
 	font-size  : 1rem;
 	font-family: 'Roboto', sans-serif;
+	color      : @fontColor;
 }
 
 h1 {
 	font-size  : 3rem;
 	font-weight: 100;
 	font-family: 'Roboto', sans-serif;
+	color      : @fontColor;
 }
 
 h2 {
 	font-size  : 1.5rem;
 	font-weight: 700;
 	font-family: 'Roboto', sans-serif;
+	color      : @fontColor;
 }
 
 h3 {
 	font-size  : 1.2rem;
 	font-weight: 700;
 	font-family: 'Roboto', sans-serif;
+	color      : @fontColor;
 }
 
 h4 {
 	font-size  : 1.1rem;
 	font-family: 'Roboto', sans-serif;
+	color      : @fontColor;
 }
 
 /*-----------  Nav style  ------------*/
@@ -192,19 +212,23 @@ nav {
 	width          : 100%;
 	display        : flex;
 	justify-content: flex-end;
+
+	a {
+		padding        : 20px;
+		text-decoration: none;
+		font-family    : 'Roboto', sans-serif;
+		color          : @fontColor;
+
+	}
 }
 
-nav>a {
-	padding        : 20px;
-	text-decoration: none;
-	font-family    : 'Roboto', sans-serif;
-	color          : black;
-}
+
+
 
 /*--------------  Header Style  -------------*/
 
 header {
-	background-color: lightcyan;
+	background-color: @primaryColor;
 	height          : 600px;
 	padding         : 20px;
 
@@ -218,11 +242,11 @@ header {
 }
 
 .Top-introduction {
-	border-bottom: 1px solid lightblue;
+	border-bottom: 1px solid @primaryColor;
 
 	h1,
 	h4 {
-		
+
 		padding: 10px 0;
 	}
 
@@ -232,28 +256,37 @@ header {
 
 	p {
 		padding: 20px 0;
+
 	}
 
 	button {
-		width:200px;
-		height: 50px;
-		border-radius: 2px;
+		width        : 200px;
+		height       : 50px;
+		border-radius: 7px;
+		opacity      : 0.9;
+
+		a {
+			color: white;
+		}
 	}
+
+
 }
 
 /*---------  Middle-section style ---------*/
 
 .Middle-section {
-	display: flex;
+	display        : flex;
 	justify-content: space-between;
-	width: 100%;
-	margin:50px 0;
+	width          : 100%;
+	margin         : 50px 0;
 
 	.Left-section {
-		width: 50%;
-		padding: 0 20px 0 0;	
-		
-		p, h2 {
+		width  : 50%;
+		padding: 0 20px 0 0;
+
+		p,
+		h2 {
 			padding: 10px 0;
 		}
 
@@ -263,7 +296,7 @@ header {
 		width: 50%;
 
 		p {
-			border:1px solid lightblue;
+			border : 1px solid @primaryColor;
 			padding: 10px;
 		}
 
@@ -276,37 +309,102 @@ header {
 }
 
 .Bottom-section {
-	width:100%;
+	width : 100%;
 	height: 200px;
 
 	table {
-		font-family: arial, sans-serif;
+		font-family    : arial, sans-serif;
 		border-collapse: collapse;
-		width: 100%;
+		width          : 100%;
+		color          : @fontColor;
 
-		td, th {
-			border: 1px solid lightblue;
+		td,
+		th {
+			border    : 1px solid @primaryColor;
 			text-align: left;
-			padding: 8px;
-		  }
-		  
-		  tr:nth-child(even) {
-			background-color: lightblue;
-		  }
+			padding   : 8px;
+		}
 
-	  }
-	  
-	  h3 {
-		  padding: 10px 0;
-	  }
+		tr:nth-child(even) {
+			background-color: @primaryColor;
+		}
+
+	}
+
+	h3 {
+		padding: 10px 0;
+	}
 
 }
 
 
 footer {
-	margin-top: 20px;
-	text-align: center;
-	width: 100%;
-	padding: 20px ;
-	background-color: lightblue;
+	margin-top      : 20px;
+	text-align      : center;
+	width           : 100%;
+	padding         : 20px;
+	background-color: @primaryColor;
+	color           : @fontColor;
 }
+
+//--------- Media queries --------//
+
+
+@media (max-width:@mobileBreakpoint) {
+
+	html,
+	body {
+		width    : 100%;
+		height   : 100%;
+		font-size: 100%;
+		margin   : 0 auto;
+	}
+
+	/*-----------  Nav style  ------------*/
+
+	nav {
+		width          : 100%;
+		display        : flex;
+		justify-content: center;
+
+		a {
+			padding        : 20px;
+			text-decoration: none;
+			font-family    : 'Roboto', sans-serif;
+			color          : @fontColor;
+
+		}
+	}
+
+	.Middle-section {
+		display       : flex;
+		flex-direction: column;
+		width         : 100%;
+
+		.Left-section {
+			width  : 100%;
+			padding: 0 20px 0 0;
+
+			p,
+			h2 {
+				padding: 10px 0;
+			}
+
+		}
+
+		.Right-section {
+			width: 100%;
+
+
+		}
+
+	}
+
+	.avatar {
+		background-image : url(img/avatar.jpg);
+		background-size  : 300px 300px;
+		background-repeat: no-repeat;
+		width            : 300px;
+		height           : 300px;
+		margin           : 0 auto;
+	}

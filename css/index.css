@@ -147,25 +147,30 @@ table {
 p {
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
+  color: #e75be0;
 }
 h1 {
   font-size: 3rem;
   font-weight: 100;
   font-family: 'Roboto', sans-serif;
+  color: #e75be0;
 }
 h2 {
   font-size: 1.5rem;
   font-weight: 700;
   font-family: 'Roboto', sans-serif;
+  color: #e75be0;
 }
 h3 {
   font-size: 1.2rem;
   font-weight: 700;
   font-family: 'Roboto', sans-serif;
+  color: #e75be0;
 }
 h4 {
   font-size: 1.1rem;
   font-family: 'Roboto', sans-serif;
+  color: #e75be0;
 }
 /*-----------  Nav style  ------------*/
 nav {
@@ -173,15 +178,15 @@ nav {
   display: flex;
   justify-content: flex-end;
 }
-nav > a {
+nav a {
   padding: 20px;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
-  color: black;
+  color: #e75be0;
 }
 /*--------------  Header Style  -------------*/
 header {
-  background-color: lightcyan;
+  background-color: #0031a4;
   height: 600px;
   padding: 20px;
 }
@@ -193,7 +198,7 @@ header .avatar {
   height: 300px;
 }
 .Top-introduction {
-  border-bottom: 1px solid lightblue;
+  border-bottom: 1px solid #0031a4;
 }
 .Top-introduction h1,
 .Top-introduction h4 {
@@ -205,7 +210,11 @@ header .avatar {
 .Bottom-introduction button {
   width: 200px;
   height: 50px;
-  border-radius: 2px;
+  border-radius: 7px;
+  opacity: 0.9;
+}
+.Bottom-introduction button a {
+  color: white;
 }
 /*---------  Middle-section style ---------*/
 .Middle-section {
@@ -226,7 +235,7 @@ header .avatar {
   width: 50%;
 }
 .Middle-section .Right-section p {
-  border: 1px solid lightblue;
+  border: 1px solid #0031a4;
   padding: 10px;
 }
 .Middle-section .Right-section h3 {
@@ -240,15 +249,16 @@ header .avatar {
   font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  color: #e75be0;
 }
 .Bottom-section table td,
 .Bottom-section table th {
-  border: 1px solid lightblue;
+  border: 1px solid #0031a4;
   text-align: left;
   padding: 8px;
 }
 .Bottom-section table tr:nth-child(even) {
-  background-color: lightblue;
+  background-color: #0031a4;
 }
 .Bottom-section h3 {
   padding: 10px 0;
@@ -257,6 +267,44 @@ footer {
   margin-top: 20px;
   text-align: center;
   width: 100%;
-  padding: 20px ;
-  background-color: lightblue;
+  padding: 20px;
+  background-color: #0031a4;
+  color: #e75be0;
+}
+@media (max-width: 500px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    margin: 0 auto;
+  }
+  /*-----------  Nav style  ------------*/
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  nav a {
+    padding: 20px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #e75be0;
+  }
+  .Middle-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .Middle-section .Left-section {
+    width: 100%;
+    padding: 0 20px 0 0;
+  }
+  .Middle-section .Left-section p,
+  .Middle-section .Left-section h2 {
+    padding: 10px 0;
+  }
+  .Middle-section .Right-section {
+    width: 100%;
+  }
 }
