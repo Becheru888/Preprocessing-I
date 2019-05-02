@@ -1,1 +1,310 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a {
+  text-decoration: none;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 80%;
+  height: 100%;
+  font-size: 100%;
+  margin: 0 auto;
+}
+/*-------- Font style -------*/
+table {
+  font-family: 'Roboto', sans-serif;
+}
+p {
+  font-size: 1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #e75be0;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+  color: #e75be0;
+}
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  color: #e75be0;
+}
+h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  color: #e75be0;
+}
+h4 {
+  font-size: 1.1rem;
+  font-family: 'Roboto', sans-serif;
+  color: #e75be0;
+}
+/*-----------  Nav style  ------------*/
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+nav a {
+  padding: 20px;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  color: #e75be0;
+}
+/*--------------  Header Style  -------------*/
+header {
+  background-color: #0031a4;
+  height: 600px;
+  padding: 20px;
+}
+header .avatar {
+  background-image: url(img/avatar.jpg);
+  background-size: 300px 300px;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 300px;
+}
+.Top-introduction {
+  border-bottom: 1px solid #0031a4;
+}
+.Top-introduction h1,
+.Top-introduction h4 {
+  padding: 10px 0;
+}
+.Bottom-introduction p {
+  padding: 20px 0;
+}
+.Bottom-introduction button {
+  width: 200px;
+  height: 50px;
+  border-radius: 7px;
+  opacity: 0.9;
+}
+.Bottom-introduction button a {
+  color: white;
+}
+/*---------  Middle-section style ---------*/
+.Middle-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 50px 0;
+}
+.Middle-section .Left-section {
+  width: 50%;
+  padding: 0 20px 0 0;
+}
+.Middle-section .Left-section p,
+.Middle-section .Left-section h2 {
+  padding: 10px 0;
+}
+.Middle-section .Right-section {
+  width: 50%;
+}
+.Middle-section .Right-section p {
+  border: 1px solid #0031a4;
+  padding: 10px;
+}
+.Middle-section .Right-section h3 {
+  padding: 10px 0;
+}
+.Bottom-section {
+  width: 100%;
+  height: 200px;
+}
+.Bottom-section table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  color: #e75be0;
+}
+.Bottom-section table td,
+.Bottom-section table th {
+  border: 1px solid #0031a4;
+  text-align: left;
+  padding: 8px;
+}
+.Bottom-section table tr:nth-child(even) {
+  background-color: #0031a4;
+}
+.Bottom-section h3 {
+  padding: 10px 0;
+}
+footer {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #0031a4;
+  color: #e75be0;
+}
+@media (max-width: 500px) {
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    font-size: 100%;
+    margin: 0 auto;
+  }
+  /*-----------  Nav style  ------------*/
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  nav a {
+    padding: 20px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: #e75be0;
+  }
+  .Middle-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .Middle-section .Left-section {
+    width: 100%;
+    padding: 0 20px 0 0;
+  }
+  .Middle-section .Left-section p,
+  .Middle-section .Left-section h2 {
+    padding: 10px 0;
+  }
+  .Middle-section .Right-section {
+    width: 100%;
+  }
+}
